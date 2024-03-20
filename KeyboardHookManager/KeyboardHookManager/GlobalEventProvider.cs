@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace KeyboardHookManager
+namespace KeyboardHookManager.Core
 {
     /// <summary>
     /// This component monitors all mouse activities globally (also outside of the application) 
@@ -298,9 +298,9 @@ namespace KeyboardHookManager
         {
             add
             {
-                if (m_KeyPress==null)
+                if (m_KeyPress == null)
                 {
-                    HookManager.KeyPress +=HookManager_KeyPress;
+                    HookManager.KeyPress += HookManager_KeyPress;
                 }
                 m_KeyPress += value;
             }
@@ -387,6 +387,6 @@ namespace KeyboardHookManager
 
         #endregion
 
-        
+
     }
 }
